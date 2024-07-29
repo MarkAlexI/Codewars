@@ -8,3 +8,10 @@ function hexStringToRGB(hexString) {
     .map(hexStrToDecInt);
   return { r, g, b };
 }
+
+//Another version
+function hexStringToRGB(hexString) {
+  const conv = (hexColor) => +parseInt(hexColor, 16).toString(10);
+  [r, g, b] = [conv(hexString.slice(1, 3)), conv(hexString.slice(3, 5)), conv(hexString.slice(5))];
+  return { 'r': r, 'g': g, 'b': b };
+}
