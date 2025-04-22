@@ -1,0 +1,1 @@
+bucketOf=s=>(m=s.match(/water|wet|wash|i don't know|slime/gi))?(r=m.join``.toLowerCase(),/water|wet|wash/.test(r)&&/i don't know|slime/.test(r)?"sludge":/water|wet|wash/.test(r)?"water":"slime"):"air"
